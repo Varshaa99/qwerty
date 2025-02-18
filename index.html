@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Still Mad? 💕</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            background: url('https://www.transparenttextures.com/patterns/pw-maze.png'), 
+                        linear-gradient(45deg, #f9c8d8, #f7a9bc, #f9c8d8);
+            background-size: cover;
+        }
+        .quote-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4b5c;
+        }
+        p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff758c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #ff5178;
+        }
+        .page {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="homePage" class="page active">
+        <div class="quote-box">
+            <h1>Are you still mad at me? 🥺</h1>
+            <p>If yes... shall we eat ramen together and make peace? 🍜💕</p>
+            <a href="javascript:void(0);" onclick="showPage('yesPage')">Yes</a>
+            <a href="javascript:void(0);" onclick="showPage('noPage')" style="margin-left: 20px;">No</a>
+        </div>
+    </div>
+    <div id="yesPage" class="page">
+        <div class="quote-box">
+            <h1>Let's go have ramen together, my love! 🍜💕</h1>
+            <p>It's time to eat, laugh, and make up. 😘</p>
+            <a href="javascript:void(0);" onclick="showPage('homePage')">Back to Home</a>
+        </div>
+    </div>
+    <div id="noPage" class="page">
+        <div class="quote-box">
+            <h1>Come on, you have no other option but YES! 😜</h1>
+            <p>Ramen sounds great, right? Let's go! 🍜</p>
+            <a href="javascript:void(0);" onclick="showPage('homePage')">Back to Home</a>
+        </div>
+    </div>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
