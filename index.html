@@ -25,6 +25,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 400px;
         }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff4b5c;
+        }
         h1 {
             font-size: 28px;
             font-weight: bold;
@@ -60,22 +65,24 @@
     <div id="homePage" class="page active">
         <div class="quote-box">
             <h1>Are you still mad at me? 🥺</h1>
-            <p>If yes... shall we eat ramen together and make peace? 🍜💕</p>
+            
             <a href="javascript:void(0);" onclick="showPage('yesPage')">Yes</a>
             <a href="javascript:void(0);" onclick="showPage('noPage')" style="margin-left: 20px;">No</a>
         </div>
     </div>
     <div id="yesPage" class="page">
         <div class="quote-box">
-            <h1>Let's go have ramen together, my love! 🍜💕</h1>
+            <h2>Let's go have ramen together, my love! 🍜💕</h2>
             <p>It's time to eat, laugh, and make up. 😘</p>
+            <h2>Come on, you have no other option but YES! 😜</h2>
+            <p>Ramen sounds great, right? Let's go! 🍜</p>
             <a href="javascript:void(0);" onclick="showPage('homePage')">Back to Home</a>
         </div>
     </div>
     <div id="noPage" class="page">
         <div class="quote-box">
-            <h1>Come on, you have no other option but YES! 😜</h1>
-            <p>Ramen sounds great, right? Let's go! 🍜</p>
+            <h1>I know you are still made at me😜</h1>
+            <p> So go give Yes!</p>
             <a href="javascript:void(0);" onclick="showPage('homePage')">Back to Home</a>
         </div>
     </div>
